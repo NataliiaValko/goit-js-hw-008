@@ -11,4 +11,4 @@ const setWatchingTime = ({ seconds }) => {
 
 const player = new Player(iframeRef);
 player.on('timeupdate', throttle(setWatchingTime, 1000));
-player.setCurrentTime(localStorage.getItem(VIMEO_KEY_LS));
+player.setCurrentTime(localStorage.getItem(VIMEO_KEY_LS) || 0);
